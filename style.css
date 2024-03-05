@@ -1,0 +1,125 @@
+/* font-family: "Open Sans", sans-serif; body  */
+/* font-family: "Poppins", sans-serif; headings  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    background: url('./images/bg-desktop.svg'), hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    padding: 5rem;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+p {
+    margin: 2rem 0 1.2rem 0;
+    line-height: 1.7rem;
+    opacity: .8;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.leftside {
+    width: 55%;
+}
+
+.leftside img {
+    width: 100%;
+}
+
+.rightside {
+    align-self: flex-start;
+    width: 45%;
+    margin: 3rem;
+    color: hsl(0, 100%, 100%);
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: hsl(0, 100%, 100%);
+    padding: 1rem 5rem;
+    margin-top: .5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 5px 15px hsla(0, 0%, 0%, 50%);
+    transition: background-color .3s, color .3s;
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: hsl(0, 100%, 100%);
+    cursor: pointer;
+}
+
+footer img {
+    height: 35px;
+    margin-left: 1rem;
+}
+
+footer img:hover {
+    filter: invert(73%) sepia(16%) saturate(4024%) hue-rotate(256deg) brightness(206%) contrast(82%);
+
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background: url('./images/bg-mobile.svg'), hsl(257, 40%, 49%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .rightside, .leftside {
+        width: 100%;
+        margin: 2.5rem 0;
+    }
+
+    .rightside {
+        text-align: center;
+    }
+
+    button {
+        width: 70%;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
